@@ -1,0 +1,5 @@
+export const male = 'images/male.png'
+export const female = 'images/female.png'
+export const one = 'images/one.png'
+export const two = 'images/two.png'
+export const three = 'images/three.png' 
