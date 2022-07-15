@@ -3,16 +3,24 @@ import React from "react";
 import BookDetailThumbnail from "../../atoms/BookDetailThumbnail";
 import BookDetailsTabs from "../../molecules/BookDetailTabs";
 
-interface Props{
-    imgSrc: string
+interface BookData {
+  id: string;
+  img: string;
+  title: string;
+  author: string;
+  reads: string;
 }
 
-const BookDetails = ({imgSrc}: Props) => {
+interface Props {
+  book: BookData;
+}
+
+const BookDetails = ({book}: Props) => {
   return (
     <div>
       <Grid container>
         <Grid item>
-          <Typography>Book name</Typography>
+          <Typography>{book.title}</Typography>
           <Typography>Book tagline</Typography>
           <Typography>Author</Typography>
           {/* TypoWithIcon */}
@@ -20,7 +28,7 @@ const BookDetails = ({imgSrc}: Props) => {
           <BookDetailsTabs />
         </Grid>
         <Grid item>
-          <BookDetailThumbnail img={imgSrc}/>
+          <BookDetailThumbnail img={book.img}/>
         </Grid>
       </Grid>
     </div>
