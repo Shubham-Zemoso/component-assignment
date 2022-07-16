@@ -1,8 +1,15 @@
+import { Tooltip } from '@mui/material'
 import React from 'react'
 
-const ToolTip = () => {
+interface Props {
+    text: string
+}
+
+const ToolTip = (props: Props) => {
   return (
-    <div>ToolTip</div>
+    <div>
+        <Tooltip title={''}></Tooltip>
+    </div>
   )
 }
 

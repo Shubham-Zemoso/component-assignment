@@ -1,9 +1,16 @@
 import React from 'react'
+import Footer from "../../organisms/Footer";
+import Header from "../../organisms/Header";
+import TradeList from '../../organisms/TradeList';
 
 const TradePage = () => {
   return (
-    <div>TradePage</div>
-  )
+    <div>
+      <Header />
+        <TradeList tradeList={[]} />
+      <Footer />
+    </div>
+  );
 }
 
 export default TradePage

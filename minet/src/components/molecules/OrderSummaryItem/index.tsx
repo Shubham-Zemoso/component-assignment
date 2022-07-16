@@ -1,9 +1,23 @@
+import { Card, CardActions } from '@mui/material'
 import React from 'react'
+import ButtonAtom from '../../atoms/ButtonAtom';
 
-const OrderSummaryItem = () => {
+interface Props {
+    sell: boolean
+}
+
+const OrderSummaryItem = (props: Props) => {
   return (
-    <div>OrderSummaryItem</div>
-  )
+    <div>
+      <Card>
+        {/* order details */}
+        {/* order details */}
+        <CardActions>
+            <ButtonAtom>{props.sell? 'Sell' : 'Buy'}</ButtonAtom>
+        </CardActions>
+      </Card>
+    </div>
+  );
 }
 
 export default OrderSummaryItem

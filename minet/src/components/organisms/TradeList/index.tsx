@@ -1,8 +1,20 @@
+import { Grid } from '@mui/material'
 import React from 'react'
+import TradeListItem from '../../molecules/TradeListItem'
 
-const TradeList = () => {
+interface Props {
+    tradeList : any[]
+}
+
+const TradeList = (props: Props) => {
   return (
-    <div>TradeList</div>
+    <div>
+        <Grid container>
+            {props.tradeList.map(trade => {
+                return <Grid item><TradeListItem /></Grid>
+            })}
+        </Grid>
+    </div>
   )
 }
 

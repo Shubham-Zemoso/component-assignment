@@ -1,8 +1,28 @@
+import { Card, CardContent, CardMedia } from '@mui/material'
 import React from 'react'
 
-const CryptoCard = () => {
+interface CryptoData {
+  id: string;
+  name: string;
+  imgSrc: string;
+  value: string;
+}
+interface Props {
+    cryptoData: CryptoData
+}
+const CryptoCard = ({cryptoData}: Props) => {
   return (
-    <div>CryptoCard</div>
+    <div>
+        <Card>
+            <CardMedia>
+                <img src={cryptoData.imgSrc}/>
+            </CardMedia>
+            <CardContent>
+                {cryptoData.name}
+                {cryptoData.value}
+            </CardContent>
+        </Card>
+    </div>
   )
 }
 
