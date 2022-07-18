@@ -6,7 +6,7 @@ interface Props extends ButtonProps {
 }
 
 const ButtonAtom = (props: Props) => {
-  return <Button sx={props.sx}>button</Button>;
+  return <Button sx={props.sx} onClick={props.handleClick}>button</Button>;
 };
 
 export default ButtonAtom;
